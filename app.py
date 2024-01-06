@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 
-from backend import hello
+from backend import hello_world
 
 app = Flask(__name__,
             static_url_path='',
@@ -15,4 +15,4 @@ def home():
 
 @app.route("/rest/hello")
 def hello():
-    return hello.hello_world(request)
+    return hello_world.hello_world(request)
